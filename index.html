@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f2ff">
+  <title>Mi lista de tareas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="eyebrow">ORGANIZA TU DÍA</div>
+      <h1>Mis tareas<span>.</span></h1>
+      <p class="subtitle">Un paso a la vez. Tú puedes ✨</p>
+    </header>
+
+    <section class="task-card" aria-label="Lista de tareas">
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">Nueva tarea</label>
+        <input id="task-input" type="text" placeholder="¿Qué necesitas hacer?" maxlength="120" autocomplete="off" required>
+        <button class="add-button" type="submit" aria-label="Agregar tarea">+</button>
+      </form>
+
+      <div class="toolbar">
+        <p id="task-count" class="task-count">0 tareas pendientes</p>
+        <button id="clear-completed" class="text-button" type="button">Borrar completadas</button>
+      </div>
+
+      <nav class="filters" aria-label="Filtrar tareas">
+        <button class="filter active" data-filter="all" type="button">Todas</button>
+        <button class="filter" data-filter="active" type="button">Pendientes</button>
+        <button class="filter" data-filter="completed" type="button">Completadas</button>
+      </nav>
+
+      <ul id="task-list" class="task-list"></ul>
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">☁️</div>
+        <p>Tu lista está despejada</p>
+        <span>Agrega una tarea para comenzar.</span>
+      </div>
+    </section>
+
+    <footer>Hecho para ayudarte a tener un día más ligero 💜</footer>
+  </main>
+</body>
+</html>
